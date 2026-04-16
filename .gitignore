@@ -16,15 +16,18 @@
 *.synctex.gz
 texput.log
 
-# Compiled PDFs in intermediate model directories (keep only the final one)
+# Compiled PDF output (not figure PDFs)
+20260416GSHCALFinal/CEPC_GSHCAL_PAPER_Draft/gshcal_nima_v2.pdf
+
+# Intermediate model directories — PDFs excluded, sources tracked separately
 20260413*/*/**.pdf
 20260413*/*.pdf
 
-# Python cache / scripts output
-__pycache__/
-*.pyc
+# Python scripts
 download_nima.py
 generate_tex.py
+__pycache__/
+*.pyc
 
 # macOS metadata
 .DS_Store
