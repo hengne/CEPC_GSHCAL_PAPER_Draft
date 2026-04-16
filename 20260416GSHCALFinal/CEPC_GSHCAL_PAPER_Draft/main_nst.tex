@@ -1,0 +1,117 @@
+%% ====================================================================
+%% GS-HCAL paper — NST (Nuclear Science and Techniques) wrapper
+%% NST (Springer) currently accepts elsarticle format.
+%% Uses elsarticle class (same as NIM A).
+%% Compiled with: latexmk main_nst.tex
+%% ====================================================================
+\documentclass[preprint,12pt,times]{elsarticle}
+
+%% --------------------------------------------------------------------
+%% Packages
+%% --------------------------------------------------------------------
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{xspace}
+\usepackage{upgreek}
+\usepackage[separate-uncertainty=true,multi-part-units=single]{siunitx}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{lineno}
+\usepackage{xcolor}
+
+%% Graphics path
+\graphicspath{{figs/}}
+
+%% --------------------------------------------------------------------
+%% Unit macros
+%% --------------------------------------------------------------------
+\DeclareSIUnit\pe{p.e.}
+\DeclareSIUnit\MIPunit{MIP}
+\DeclareSIUnit\phMeV{ph/MeV}
+\newcommand{\lambdaI}{\ensuremath{\lambda_{\mathrm{I}}}\xspace}
+\newcommand{\peMIP}{\ensuremath{\text{p.e.}/\text{MIP}}\xspace}
+\newcommand{\cellsize}{\ensuremath{40\times40\times10~\text{mm}^{3}}\xspace}
+\newcommand{\sipmsize}{\ensuremath{3\times3~\text{mm}^{2}}\xspace}
+
+%% Line numbers for review
+\modulolinenumbers[5]
+\journal{Nuclear Science and Techniques}
+
+%% ====================================================================
+\begin{document}
+\begin{frontmatter}
+
+\title{Design and development of a glass-scintillator hadronic calorimeter
+for the CEPC reference detector}
+
+%% --------------------------------------------------------------------
+%% Authors — [PLACEHOLDER — replace with final author list]
+%% --------------------------------------------------------------------
+\author[scnu]{GS-HCAL Working Group}
+
+\author[scnu]{Hengne~Li\corref{cor1}}
+\ead{Hengne.Li@m.scnu.edu.cn}
+\cortext[cor1]{Corresponding author}
+
+\affiliation[scnu]{organization={South China Normal University},
+  addressline={55 Zhongshan Avenue West},
+  city={Guangzhou}, postcode={510631}, country={China}}
+
+%% --------------------------------------------------------------------
+%% Abstract
+%% --------------------------------------------------------------------
+\begin{abstract}
+We present the design, technology development, and performance evaluation
+of a Glass-Scintillator Hadronic Calorimeter (GS-HCAL) proposed as the
+baseline hadronic calorimeter for the Circular Electron-Positron Collider
+(CEPC) reference detector.
+The CEPC is a proposed large circular $e^{+}e^{-}$ collider designed to
+operate as a Higgs factory at $\sqrt{s}=240$~GeV and as a high-luminosity
+$Z$-pole machine at $\sqrt{s}=91.2$~GeV.
+The GS-HCAL employs high-density gadolinium fluoro-oxide (GFO)
+glass-scintillator cells of \cellsize, each read out by a
+\sipmsize~silicon photomultiplier (SiPM), arranged in a barrel and two
+endcaps totalling approximately 5.22~million channels.
+With a depth of $6\,\lambdaI$ and a sampling fraction of approximately
+30\%, the design provides substantially higher active-material density
+than conventional sampling hadronic calorimeters.
+Key R\&D results are reported: measured light yields of 60--100~\peMIP;
+radiation tolerance retaining more than 70\% of the initial light yield
+at \SI{100}{Gy}; and single-cell measurements with a $^{137}$Cs source,
+cosmic-ray muons ($63.6\pm0.5$~\peMIP), and \SI{5}{GeV} electrons at
+KEK ($157.6\pm2.9$~\peMIP).
+Full Geant4 simulation with a digitisation model yields a single-hadron
+energy resolution of $\sigma_{E}/E = 29.8\%/\sqrt{E}\oplus6.5\%$ and
+an energy non-linearity within 2\%.
+The Higgs-boson dijet mass resolution for $H\to gg$ achieved through
+particle-flow reconstruction is 3.88\%, satisfying the CEPC target of
+3--4\%.
+Alternative technologies based on glass resistive-plate chambers
+(Semi-Digital HCAL, $65\%/\sqrt{E}\oplus2.5\%$) and plastic scintillator
+tiles (Analog HCAL, $56\%/\sqrt{E}\oplus2.5\%$) are also reviewed.
+A prototype beam-test programme spanning 2025--2027 will validate the
+full design.
+\end{abstract}
+
+\begin{keyword}
+glass scintillator \sep
+hadronic calorimeter \sep
+CEPC \sep
+silicon photomultiplier \sep
+particle-flow algorithm \sep
+gadolinium fluoro-oxide \sep
+energy resolution \sep
+highly granular calorimeter
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+
+\input{body}
+\bibliographystyle{elsarticle-num}
+
+\end{document}
