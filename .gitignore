@@ -1,0 +1,30 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.spl
+*.acn
+*.glo
+*.ist
+*.toc
+*.lot
+*.lof
+*.synctex.gz
+texput.log
+
+# Compiled PDFs in intermediate model directories (keep only the final one)
+20260413*/*/**.pdf
+20260413*/*.pdf
+
+# Python cache / scripts output
+__pycache__/
+*.pyc
+download_nima.py
+generate_tex.py
+
+# macOS metadata
+.DS_Store
